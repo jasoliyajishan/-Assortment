@@ -1,31 +1,23 @@
 #include <stdio.h>
 
-main()
-{
+ main()
+ {
+    int array[5] = {1, 2, 3, 4, 5};
+    int temp = array[4];
+    int i;
 
-int i,j,last,n=3,a[]={1,2,3,4,5,6};
-int length=sizeof(a)/sizeof(a[0]);
-printf("value of arry=\n");
-for(i=0;i<length;i++)
-	{
-		printf("%d\n",a[i]);
-	}
-	
-	for(i=0;i<n;i++)
-	{
-		last=a[length-1];
-	
-	for(j=length-1;j>0;j--)
-	{
-		a[j]=a[j-1];
-	     }
-	a[0]=last;
+    for (i = 4; i > 0; i--)
+    {
+        array[i] = array[i - 1];
+    }
+    array[0] = temp;
+
+    printf("The right rotate  array is : ");
+    for (i = 0; i < 5; i++)
+    {
+       printf("%d ", array[i]);
     }
     printf("\n");
-    printf("right rotation arry=\n");
-    for(i=0;i<length;i++)
-    {
-    	printf("%d\n",a[i]);
-	}
-}
 
+    
+}
