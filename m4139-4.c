@@ -1,33 +1,31 @@
 #include <stdio.h>
 
-main() {
-    int m1[3][3] = {{1, 2, 3},
-                         {4, 5, 6},
-                         {7, 8, 9}};
-    int m2[3][3] = {{10, 11, 12},
-                         {13, 14, 15},
-                         {16, 17, 18}};
-    int r[3][3];
-int i,j;
-    for (i = 0; i < 3; i++)
-	 {
-        for ( j = 0; j < 3; j++)
-		 {
-            r[i][j] = m1[i][j] + m2[i][j];
-        }
-    }
+ main() 
+ {
+    int matrix1[2][2] = {{1, 2}
+			,{3, 4}};
+    int matrix2[2][2] = {{5, 6}
+			,{7, 8}};
+    int sum[2][2];
+    int i, j;
 
-    printf("adition of two matrix : \n");
-    for ( i = 0; i < 3; i++) 
-	{
-        for ( j = 0; j < 3; j++) 
-		{
-            printf("%d ",r[i][j]);
+    for (i = 0; i < 2; i++)
+    {
+	
+        for (j = 0; j < 2; j++)
+	{         	    
+            sum[i][j] = matrix1[i][j] + matrix2[i][j];
+	}	
+    }
+    printf("The sum of two matrices is : \n");
+    for (i = 0; i < 2; i++)
+	 {
+        for (j = 0; j < 2; j++)
+        {
+		
+            printf("%d ", sum[i][j]);
         }
         printf("\n");
     }
 
-    
-    
 }
-
